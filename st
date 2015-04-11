@@ -12,7 +12,7 @@ arch=('i686' 'x86_64' 'armv7h')
 license=('MIT')
 depends=('libxft')
 makedepends=('ncurses' 'libxext' 'git')
-source=('git://git.suckless.org/st')
+source=('https://github.com/yrns/st.git')
 sha1sums=('SKIP')
 
 provides=("${_pkgname}")
@@ -30,7 +30,7 @@ prepare() {
 		-e 's/CFLAGS =/CFLAGS +=/g' \
 		-e 's/LDFLAGS =/LDFLAGS +=/g' \
 		-i config.mk
-	sed '/char font/s/".*"/"Fixed:pixelsize=13:style=SemiCondensed"/' -i config.def.h
+	#sed '/char font/s/".*"/"Fixed:pixelsize=13:style=SemiCondensed"/' -i config.def.h
 }
 
 build() {
