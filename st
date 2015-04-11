@@ -12,7 +12,7 @@ arch=('i686' 'x86_64' 'armv7h')
 license=('MIT')
 depends=('libxft')
 makedepends=('ncurses' 'libxext' 'git')
-source=('https://github.com/yrns/st.git')
+source=('git+https://github.com/yrns/st.git')
 sha1sums=('SKIP')
 
 provides=("${_pkgname}")
